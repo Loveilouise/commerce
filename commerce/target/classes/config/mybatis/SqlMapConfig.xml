@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+<!-- 在db.properties中配置property值 直接引用 -->
+<!-- <properties resource="db.properties"/>
+
+简化路径名称
+<typeAliases>
+	简化路径名称为"s"(在mapper方法的的type值内写"s")
+	<typeAlias type="com.neuesoft.pojo.Student" alias="s" />
+
+	简化路径名称为类名(在mapper方法的type值内写"Student")
+	<package name="com.neuesoft.pojo"/>
+</typeAliases> -->
+
+<!-- <environments default="devp">
+	<environment id="devp">
+	<transactionManager type="JDBC"></transactionManager>
+	使用 jdbc 事务管理
+	<dataSource type="POOLED">
+		数据库连接池
+		<property name="driver" value="${driver}"/>
+		<property name="url" value="${url}"/>
+		<property name="username" value="${username}"/>
+		<property name="password" value="${password}"/>
+	</dataSource>
+	</environment>
+	
+</environments>
+
+加载mapper映射文件
+<mappers>
+	<mapper resource="com/neuesoft/mapper/studentMapper.xml"/>
+	
+	<mapper class="com.neuesoft.mapper.studentMapper"/>
+
+	<package name="com.neuesoft.mapper"/>
+</mappers> -->
+
+</configuration>

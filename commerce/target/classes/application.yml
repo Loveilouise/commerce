@@ -1,0 +1,27 @@
+spring: 
+    datasource: 
+        username: root
+        password: 123
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/commerce?useSSL=false
+        type: com.alibaba.druid.pool.DruidDataSource
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1 FROM DUAL
+        testWhileIdle: true
+        poolPreparedStatements: true
+        filters: stat,wall,log4j 
+        useGlobalDataSouseceStat: true
+        connection-properties: druid.stat.mergeSql\=true;druid.stat.slowSqlMillis\=5000 
+    freemarker: 
+        settings: 
+            classic_compatible: true
+mybatis:
+  type-aliases-package: com.neuesoft.commerce.pojo
+  mapper-locations: classpath:config/mapper/*.xml
+
+    
